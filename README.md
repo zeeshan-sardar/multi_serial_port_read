@@ -13,7 +13,7 @@ This is a python script written and tested using python 3.6 and Ubuntu18 but it 
 ### Step 1
 Install the `pyserial` package using the below command.  
 ```
-pip3 install pyserial 
+sudo pip3 install pyserial 
 ```
 
 ### Step 2
@@ -21,15 +21,17 @@ Copy the `my_rules.rules` file into the `/etc/udev/rules.d` directory to permane
 ```
 sudo cp my_rules.rules /etc/udev/rules.d
 ```
-
 ### Step 3
+Load the arduino sketches placed in the `arduino_files` folder. These are the simplest sketches just to send a digit to serial port. 
+
+### Step 4
 This step is necessary to find the IDs of the devices and setting up the header of the log file. Otherwise, the code would not be able to write the serial data into the corresponding columns.  
 For this step, attach all the available Arduinos (maximum four) and run the `setup.py` script using the below command in the terminal (assuming you are already in the root directory of the repository).
 ```
 python3 setup.py
 ```
 
-### Step 4
+### Step 5
 After completing all the above steps (hopefully, everything is set up), the main script can be called by running the following command.
 ```
 python3 main.py
