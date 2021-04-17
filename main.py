@@ -15,7 +15,7 @@ f.close()
 print('Opening file to append data..')
 with open("data_log.txt", "a") as f:
 # main loop
-print('Entering into main loop..')
+    print('Entering into main loop..')
     while True:
         portList = list(list_ports.grep('ACM'))
         row_list = [',', ',', ',', ',', '\n']
