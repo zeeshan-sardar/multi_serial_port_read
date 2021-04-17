@@ -3,8 +3,8 @@
 # Overview
 This repository is about interfacing multiple arduinos to the serial port, read them simultaniously and writing the data into a file. It makes use of python `pyserial` library to find the available serial ports and read data from them. After reading data from the ports, it is written into a text file. This repository automatically determines the unique ID related to each arduino and make sure to write the data into the corresponding columns if incase one or more arduinos are unplugged during the operation. That means, it also handles the automatic permisions of the ports. At the moment, it can handle upto four arduinos simultaniously but with the minor tweak it can be used to read data from arbitrary number of arduinos or any orther type of serial devices.  
 
-I have tested it with two arduinos, one is Uno and the other is Mega 2560 having unique IDs of `7593531383635161C192` and `7583331383335140B121` respectively. I put these ID as column names of the file and put the corresponding data in respective columns. The script keeps the particulr row empty of a specific column if one or two serial devices (arduinos) are unplugged and only stores the data of available devices. A screenshot of the saved file is show below.
-![plot](./images/sample_saved_data.png.png)
+I have tested it with two arduinos, one is Uno and the other is Mega 2560 having unique IDs of `7593531383635161C192` and `7583331383335140B121` respectively. I put these ID as column names of the file and put the corresponding data in respective columns. The script keeps the particulr row empty of a specific column if one or two serial devices (arduinos) are unplugged and only stores the data of available devices. A screenshot of the saved file is show below.  
+![plot](./images/sample_saved_data.png)
 
 # Installation and Testing
 ## Step 0
