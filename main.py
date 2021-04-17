@@ -41,7 +41,7 @@ with open("data_log.txt", "a") as f:
         empty_data_fields = row_list.count(',')
         # check if the there is data available from at least one port
         if empty_data_fields < 4: 
-            print(f'Reading from {4-empty_data_fields} devices.')
+            print('Reading from', 4-empty_data_fields, 'devices.')
             # write into file
             f.writelines(row_list)
             f.flush()
