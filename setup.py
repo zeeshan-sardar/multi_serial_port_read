@@ -10,8 +10,12 @@ for port in portList:
 device_ids.append('\n')
 
 # writing the IDs as column names of the log data file
-with open("data_log.txt", "w") as f:
-    f.writelines(device_ids)
-    f.close()
+try:
+    with open("data_log.txt", "w") as f:
+        f.writelines(device_ids)
+        f.close()
+    print('File header written into the file.')
+except:
+    print('Error occured..')
 
 
