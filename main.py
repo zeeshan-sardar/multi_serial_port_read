@@ -3,7 +3,7 @@ import serial
 from serial.tools import list_ports
 
 # list the plugged devices
-portList = list(list_ports.comports())
+portList = list(list_ports.grep('ACM'))
 
 # open file to read header (column names)
 print('Reading column names..')
@@ -17,7 +17,7 @@ with open("data_log.txt", "a") as f:
 # main loop
 print('Entering into main loop..')
     while True:
-        portList = list(list_ports.comports())
+        portList = list(list_ports.grep('ACM'))
         row_list = [',', ',', ',', ',', '\n']
         # loop over the available ports
         for port in portList:
